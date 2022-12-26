@@ -1,38 +1,37 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "aimobs",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "AIMobs",
+  "description": "Chat with Minecraft mobs and entities by using the OpenAI API. Now for 1.18",
   "authors": [
-    "Me!"
+    "rebane2001",
+    "tokanada"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/rebane2001/aimobs",
+    "sources": "https://github.com/rebane2001/aimobs"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "LGPL-3.0",
+  "icon": "com/rebane2001/aimobs/icon.png",
 
-  "environment": "*",
+  "environment": "client",
   "entrypoints": {
-    "main": [
-      "net.fabricmc.example.ExampleMod"
+    "client": [
+      "com.rebane2001.aimobs.AIMobsMod"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "aimobs.mixins.json"
   ],
 
   "depends": {
-    "fabricloader": ">=0.14.6",
+    "fabricloader": ">=0.12.0",
     "fabric": "*",
     "minecraft": "~1.18.2",
-    "java": ">=17"
+    "java": ">=16"
   },
-  "suggests": {
-    "another-mod": "*"
-  }
+  "suggests": {}
 }
