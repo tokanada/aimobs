@@ -1,9 +1,29 @@
-# Fabric Example Mod
+# AIMobs
+AIMobs is a mod that lets you chat with Minecraft mobs and other entities by creating prompts and using the OpenAI API.
 
-## Setup
+### Requirements
+- Minecraft 1.18.2
+- Fabric
+- Fabric API
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+### Usage
+After installing the mod, grab your OpenAI API key from [here](https://beta.openai.com/account/api-keys), and set it with the `/aimobs setkey <key>` command.
 
-## License
+You should now be able to **talk to mobs by shift+clicking** on them!
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+### Commands
+- `/aimobs` - View configuration status
+- `/aimobs help` - View commands help
+- `/aimobs enable/disable` - Enable/disable the mod
+- `/aimobs setkey <key>` - Set OpenAI API key
+- `/aimobs setmodel <model>` - Set AI model
+- `/aimobs settemp <temperature>` - Set model temperature
+
+### Notes
+This project was initially made in 1.12 as a client Forge mod, then ported to 1.19 PaperMC as a server plugin, then ported to Fabric 1.19. Because of this, the code can be a little messy and weird. A couple hardcoded limits are 64 as the max token length and 4096 as the max prompt length (longer prompts will get the beginning cut off), these could be made configurable in the future.
+
+Some plans for the future:
+- Support for the Forge modloader.
+- Support for other AI APIs.
+
+The icon used is the **🧠** emoji from [Twemoji](https://twemoji.twitter.com/) (CC BY 4.0)
