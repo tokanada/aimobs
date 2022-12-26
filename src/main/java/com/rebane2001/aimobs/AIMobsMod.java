@@ -37,6 +37,8 @@ public class AIMobsMod implements ClientModInitializer {
 				.then(ClientCommandManager.literal("disable").executes(context -> AIMobsCommand.setEnabled(context, false))
 				)
 		);
+
+
 		AttackEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
 			if (!AIMobsConfig.config.enabled) return ActionResult.PASS;
 			if (!player.isSneaking()) {
